@@ -1,0 +1,35 @@
+.project_title{
+    @include flex(center, space-between, 20px);
+    padding-top: 30px;
+
+    h1{
+        font-size: 18px;
+        font-weight: 400;
+        color: #34642C;
+    }
+    &_right{
+        @include grid(1fr, 5px);
+        width: 70%;
+        justify-items: end;
+
+        &_border{
+            border: 1px solid #34642C;
+            border-radius: 1px;
+            height: 1px;
+            width: 100%;
+        }
+        img{
+            text-align: end;
+        }
+    }
+}
+.project_items{
+    @include grid(1fr, 0px);
+}
+.project_item{
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}

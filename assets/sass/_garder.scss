@@ -1,0 +1,129 @@
+.garden{
+    background-image: url(../../img/garder_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 5%
+}
+.garden_title{
+    @include flex(center, space-between, 20px);
+    padding: 20px 0;
+
+    h1{
+        font-size: 18px;
+        font-weight: 400;
+        color: $first-color;
+    }
+    &_right{
+        @include grid(1fr, 5px);
+        width: 70%;
+        justify-items: end;
+
+        &_border{
+            border: 1px solid $first-color;
+            border-radius: 1px;
+            height: 1px;
+            width: 100%;
+        }
+        img{
+            text-align: end;
+        }
+    }
+}
+.garden_text{
+    padding: 20px 15px;
+    background-color: #39362fbd;
+    font-size: 14px;
+    color: $first-color;
+    line-height: 170%;
+    font-weight: 300;
+}
+.garden_items{
+    padding: 42px 10px 42px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    @include grid(1fr, 30px);
+    margin-top: 5%
+}
+.garden_item{
+    @include grid (1fr 1fr, 20px);
+    align-items: center;
+    
+
+    &_btn{
+        @include grid(1fr, 18px);
+
+        button{
+            width: 300px;
+            height: 60px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #000;
+            border: 2px solid #0000002c;
+            box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.100), -3px -3px 3px rgba(128, 128, 128, 0.100);
+            background-color: transparent;
+        }
+        button:hover{
+            border: 2px solid #FF7E35;
+            border-right: 20px solid #FF7E35;
+        }
+    }
+    &_text{
+        &_{
+            @include flex(center, flex-start, 5px);
+            &_{
+                width: 5px;
+                height: 5px;
+                background-color: #FF7E35;
+                border-radius: 100%;
+            }
+            p{
+                font-size: 16px;
+                color: #000;
+                line-height: 130%;
+            }
+        }
+        
+    }
+}
+.garden_item_bottom{
+    width: 100%;
+    @include grid(1fr, 10px);
+    padding-top: 30px;
+
+    h3{
+        font-size: 16px;
+        color: #000;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 900px){
+    .garden_items{
+        padding: 30px 80px;
+    }
+    .garden_item{
+        @include grid(1fr, 20px);
+
+        &_btn{
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 600px){
+    .garden_items{
+        padding: 20px 10px;
+    }
+    .garden_item{
+        &_text{
+            &_{
+                p{
+                    font-size: 11px;
+                }
+            }
+            
+        }
+    }
+}

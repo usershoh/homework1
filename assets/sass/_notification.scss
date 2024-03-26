@@ -1,0 +1,43 @@
+.notification_img{
+    margin: 0 auto;
+    width: 300px;
+    padding: 40px 0;
+
+    img{
+        width: 100%;
+    }
+}
+.notification_items{
+    @include grid(1fr 1fr 1fr, 30px);
+}
+.notification_item{
+    @include grid(1fr, 10px);
+    justify-items: center;
+    h2{
+        font-size: 14px;
+        color: #000;
+        font-weight: 400;
+    }
+    p{
+        font-size: 12px;
+        font-weight: 300;
+        color: #34642C;
+        text-align: center;
+    }
+}
+
+@media (max-width: 850px){
+    .notification_items{
+        @include grid(1fr 1fr, 30px);
+    }
+}
+@media (max-width: 600px){
+    .notification_items{
+        @include grid(1fr, 30px);
+    }
+}
+@media (max-width: 400px){
+    .notification_img{
+        width: 100%;
+    }
+}
